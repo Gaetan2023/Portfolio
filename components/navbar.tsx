@@ -7,25 +7,19 @@ import {
 	NavbarItem,
 	NavbarMenuItem,
 } from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
 import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
 import { Input } from "@nextui-org/input";
 
 import { link as linkStyles } from "@nextui-org/theme";
+import { FaGithub , FaTwitter, FaLinkedin, FaTelegram,FaWhatsapp,FaDiscord } from 'react-icons/fa6'
 
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
 import clsx from "clsx";
 
 import { ThemeSwitch } from "@/components/theme-switch";
-import {
-	TwitterIcon,
-	GithubIcon,
-	DiscordIcon,
-	HeartFilledIcon,
-	SearchIcon,
-} from "@/components/icons";
+import {SearchIcon,} from "@/components/icons";
 
 import { Logo } from "@/components/icons";
 
@@ -57,7 +51,7 @@ export const Navbar = () => {
 				<NavbarBrand as="li" className="gap-3 max-w-fit">
 					<NextLink className="flex justify-start items-center gap-1" href="/">
 						<Logo />
-						<p className="font-bold text-inherit">ACME</p>
+						<p className="font-bold text-inherit"></p>
 					</NextLink>
 				</NavbarBrand>
 				<ul className="hidden lg:flex gap-4 justify-start ml-2">
@@ -83,42 +77,117 @@ export const Navbar = () => {
 				justify="end"
 			>
 				<NavbarItem className="hidden sm:flex gap-2">
-					<Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
-						<TwitterIcon className="text-default-500" />
-					</Link>
-					<Link isExternal href={siteConfig.links.discord} aria-label="Discord">
-						<DiscordIcon className="text-default-500" />
-					</Link>
-					<Link isExternal href={siteConfig.links.github} aria-label="Github">
-						<GithubIcon className="text-default-500" />
-					</Link>
+					
+			<div className="mt-1 flex items-center space-x-3">
+             <a
+               href="https://github.com/Gaetan2023"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="hover:text-gray-400 text-gray-800 dark:text-white transition-colors duration-300"
+             >
+               <FaGithub size={20} />
+             </a>
+             <a
+               href="https://www.linkedin.com/in/gaetan-musinde-99b59b272/"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="hover:text-blue-400 text-gray-800 dark:text-white transition-colors duration-300"
+             >
+               <FaLinkedin size={20} />
+             </a>
+             <a
+               href="https://twitter.com/gaetan199025"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="hover:text-blue-400 text-gray-800 dark:text-white transition-colors duration-300"
+             >
+               <FaTwitter size={20}/>
+             </a>
+             <a
+               href="https://t.me/Gaetan_musinde"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="hover:text-indigo-400 text-gray-800 dark:text-white transition-colors duration-300"
+             >
+               <FaTelegram size={20} />
+             </a>
+              <a
+               href=" https://wa.me/243974687721"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="hover:text-green-500 text-gray-800 dark:text-white transition-colors duration-300"
+             >
+               <FaWhatsapp size={20} />
+             </a>
+             <a
+               href="https://discord.com/channels/@gaetan8290"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="hover:text-blue-600  text-gray-800 dark:text-white transition-colors duration-300"
+             >
+               <FaDiscord size={20} />
+             </a>
+           </div>
 					<ThemeSwitch />
 				</NavbarItem>
-				<NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
+				<NavbarItem className="hidden lg:flex">{}</NavbarItem>
 				<NavbarItem className="hidden md:flex">
-					<Button
-            isExternal
-						as={Link}
-						className="text-sm font-normal text-default-600 bg-default-100"
-						href={siteConfig.links.sponsor}
-						startContent={<HeartFilledIcon className="text-danger" />}
-						variant="flat"
-					>
-						Sponsor
-					</Button>
+					
 				</NavbarItem>
 			</NavbarContent>
 
 			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-				<Link isExternal href={siteConfig.links.github} aria-label="Github">
-					<GithubIcon className="text-default-500" />
-				</Link>
+		<div className="mt-1 flex items-center space-x-3">
+             <a
+               href="https://github.com/Gaetan2023"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="hover:text-gray-400 text-gray-800 dark:text-white transition-colors duration-300"
+             >
+               <FaGithub size={20} />
+             </a>
+            
+             <a
+               href="https://twitter.com/gaetan199025"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="hover:text-blue-400 text-gray-800 dark:text-white transition-colors duration-300"
+             >
+               <FaTwitter size={20}/>
+             </a>
+             <a
+               href="https://t.me/Gaetan_musinde"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="hover:text-indigo-400 text-gray-800 dark:text-white transition-colors duration-300"
+             >
+               <FaTelegram size={20} />
+             </a>
+              <a
+               href=" https://wa.me/243974687721"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="hover:text-green-500 text-gray-800 dark:text-white transition-colors duration-300"
+             >
+               <FaWhatsapp size={20} />
+             </a>
+             <a
+               href="https://discord.com/channels/@gaetan8290"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="hover:text-blue-600  text-gray-800 dark:text-white transition-colors duration-300"
+             >
+               <FaDiscord size={20} />
+             </a>
+           </div>
+				
+				
 				<ThemeSwitch />
 				<NavbarMenuToggle />
 			</NavbarContent>
 
 			<NavbarMenu>
-				{searchInput}
+				{}
 				<div className="mx-4 mt-2 flex flex-col gap-2">
 					{siteConfig.navMenuItems.map((item, index) => (
 						<NavbarMenuItem key={`${item}-${index}`}>
@@ -130,7 +199,7 @@ export const Navbar = () => {
 										? "danger"
 										: "foreground"
 								}
-								href="#"
+								href={item.href}
 								size="lg"
 							>
 								{item.label}
@@ -142,3 +211,25 @@ export const Navbar = () => {
 		</NextUINavbar>
 	);
 };
+/*{<Link isExternal href={siteConfig.links.twitter} aria-label="Twitter">
+						<TwitterIcon className="text-default-500" />
+					</Link>
+					<Link isExternal href={siteConfig.links.discord} aria-label="Discord">
+						<DiscordIcon className="text-default-500" />
+					</Link>
+					<Link isExternal href={siteConfig.links.github} aria-label="Github">
+						<GithubIcon className="text-default-500" />
+					</Link>
+				<Link isExternal href={siteConfig.links.github} aria-label="Github">
+					<GithubIcon className="text-default-500" />
+				</Link>
+			<Button
+            isExternal
+						as={Link}
+						className="text-sm font-normal text-default-600 bg-default-100"
+						href={siteConfig.links.sponsor}
+						startContent={<HeartFilledIcon className="text-danger" />}
+						variant="flat"
+					>
+						Sponsor
+					</Button>}*/
